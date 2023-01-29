@@ -19,7 +19,7 @@ import streamlit as st
 df = pd.read_csv('https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv')
 #MELHORANDO O NOME DAS TABELAS
 df = df.rename(columns={'newDeaths': 'Novos Óbitos', 'newCases': 'Novos Casos', 'deaths_per_100k_inhabitants': 'Óbitos por 100 mil habitantes', 'totalCases_per_100k_inhabitants': 'Casos por 100 mil habitantes'})
-#SELEÃO DO ESTADO
+#SELEÇÃO DO ESTADO
 estados = list(df['state'].unique())
 state = st.sidebar.selectbox('Qual o estado', estados) #sidebar deixa a informação no menu lateral
 #SELEÇÃO DA COLUNA
